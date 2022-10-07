@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-
+//defined schema//
 const urlSchema = new mongoose.Schema({
 
     urlCode: {
@@ -7,6 +7,7 @@ const urlSchema = new mongoose.Schema({
         required: true,
         unique: true,
         lowerCase: true,
+        trim:true,
 
     },
     longUrl: {
@@ -21,4 +22,4 @@ const urlSchema = new mongoose.Schema({
     }
 
 }, { timestamps: true });
-module.exports = mongoose.model("Url", urlSchema)
+module.exports = mongoose.model("Url", urlSchema)//==urls
